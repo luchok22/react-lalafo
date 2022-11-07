@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.homeCarts button{
+    margin-left: 80px;
+    width: 203px;
+    background: #25B8E7;
+    border-radius: 12px;
+    border: none;
+    height: 44px;
+    
+    margin-top: 22px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.homeCarts a{
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+.homeCarts p{
+    padding-top: 22px;
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 23px;
+    font-family: 'Inter', sans-serif;
+
+}
+.homeCarts{
+    width: 363px;
+    height: 424px;
+    background-color: #F4F4F4;
+}

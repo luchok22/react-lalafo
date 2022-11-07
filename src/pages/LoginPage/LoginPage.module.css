@@ -1,0 +1,31 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.container h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+.In{
+    width: 650px;
+ 
+    text-align: right;
+}
+.In button{
+    width: 100px;
+height: 24px;
+border-radius: 10px;
+border: 1px solid #6AC4FF ;
+background-color: white;
+}
+.In a:hover{
+    color: #6AC4FF;
+}
+.In span{
+    margin-right: 100px;
+}
+.In a{
+    text-decoration: none;
+    color: black;
+}

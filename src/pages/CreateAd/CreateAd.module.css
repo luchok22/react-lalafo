@@ -1,0 +1,29 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+.container h1{
+    text-align: center;
+    margin-top: 55px;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+
+color: #000000;
+margin-bottom: 65px;
+}
+.input input{
+    width: 760px;
+    height: 45px;
+    background: #FFFFFF;
+border: 1px solid rgba(107, 111, 120, 0.19);
+border-radius: 6px;
+    padding-left: 15px;
+}
+.input p{
+    margin-bottom: 10px;
+}
