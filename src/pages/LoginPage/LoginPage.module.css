@@ -12,6 +12,19 @@
  
     text-align: right;
 }
+.inputLogin label input{
+    width: 650px;
+    height: 40px;
+    padding-left: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 37px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+.inputLogin label p{
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .In button{
     width: 100px;
 height: 24px;

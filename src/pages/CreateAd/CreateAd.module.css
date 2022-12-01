@@ -27,3 +27,89 @@ border-radius: 6px;
 .input p{
     margin-bottom: 10px;
 }
+.Description div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.Description{
+    width: 755px;
+    display: flex;
+    flex-direction: column;
+}
+.Description label input{
+    height: 96px;
+left: 74px;
+top: 387px;
+
+background: #FFFFFF;
+border: 1px solid rgba(107, 111, 120, 0.19);
+border-radius: 6px;
+margin-top: 10px;
+}
+.textarea{
+    display: flex;
+    width: 755px;
+    flex-direction: column;
+    grid-gap: 10px 15px;
+}
+.Description label{
+    display: flex;
+    flex-direction: column;
+}
+.price label{
+    display: flex;
+    flex-direction: column;
+    width: 755px;
+}
+.price input{
+    height: 44px;
+left: 72px;
+top: 551px;
+
+background: #FFFFFF;
+border: 1px solid rgba(107, 111, 120, 0.19);
+border-radius: 6px;
+}
+.container div p{
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height */
+
+
+/* Name title */
+
+color: #434242;
+margin-top: 10px;
+}
+.price span{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.saveAd{
+    text-align: right;
+    width: 755px;
+    margin-top: 50px;
+}
+.saveAd span{
+    margin-right: 100px;
+}
+.saveAd a{
+    text-decoration: none;
+}
+.saveAd button{
+    width: 100px;
+height: 24px;
+border-radius: 10px;
+border: 1px solid #6AC4FF ;
+background-color: white;   
+}
+.saveAd a:hover{
+    color: #6AC4FF;
+}
+.saveAd a{
+    color: black;
+}

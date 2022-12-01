@@ -15,3 +15,9 @@
     margin-bottom: 74px;
     font-family: 'Inter', sans-serif;   
 }
+.homeCartsDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+}

@@ -1,9 +1,15 @@
 import css from "./Header.module.css"
-import { Link } from "react-router-dom"
-import { Route, Routes } from "react-router-dom"
-import LoginPage from "../../pages/LoginPage/LoginPage"
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { authSliceActions } from "../../redux/authSlice";
 
 const Header = () => {
+   const auth = useSelector( (state) => state.auth.isAuth )
+   const dispatch = useDispatch()
+
+   const onLogout =  () => {
+      dispatch(authSliceActions.logout())
+   }
      return(
         <header>
         <div className={css.container}>
@@ -12,7 +18,10 @@ const Header = () => {
              <div className={css.header_left}>
               <a href="">О нас</a>
               <a href="">Контакты</a>
-              <Link to="/signUp">Войти</Link>
+              {
+               auth ? <button onClick={onLogout}>login out</button> : <Link to="/signUp">Войти</Link> 
+              }
+              
              </div>
           </div>
         </div>

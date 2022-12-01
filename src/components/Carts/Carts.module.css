@@ -8,10 +8,9 @@
     width: 203px;
     background: #25B8E7;
     border-radius: 12px;
+    cursor: pointer;
     border: none;
     height: 44px;
-    
-    margin-top: 22px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
@@ -22,9 +21,12 @@
     font-family: 'Inter', sans-serif;
 }
 .homeCarts p{
+    overflow: hidden;
+      white-space: nowrap; 
     padding-top: 22px;
     font-size: 22px;
     font-weight: 700;
+    text-overflow: ellipsis;
     padding-left: 23px;
     font-family: 'Inter', sans-serif;
 
@@ -33,4 +35,7 @@
     width: 363px;
     height: 424px;
     background-color: #F4F4F4;
+}
+.homeCarts img{
+    width: 363px;
 }

@@ -1,0 +1,40 @@
+.container{
+    width: 90%;
+    margin: 50px auto;
+}
+*{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container > button{
+    width: 100px;
+height: 30px;
+border-radius: 10px;
+background-color:  #6AC4FF ;
+cursor: pointer;
+border: 1px solid #6AC4FF ;
+}
+.container > a{
+    text-decoration: none;
+    color: white;
+}
+.container div button{
+    background-color: red;
+    cursor: pointer;
+ font-size: 20px;
+    font-family: 'Inter', sans-serif;   
+       color: white;
+}
+.houses{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
