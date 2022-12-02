@@ -113,3 +113,7 @@ background-color: white;
 .saveAd a{
     color: black;
 }
+.saveAd button:disabled{
+    background-color: gray;
+    cursor: not-allowed;
+}

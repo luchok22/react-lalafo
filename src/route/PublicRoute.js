@@ -5,7 +5,7 @@ function PublicRoute({ children }) {
   const isAuth = useSelector((state) => state.auth.isAuth)
 
   if(isAuth) {
-    return <Navigate to="/" replace />
+    return <Navigate to="/profile" replace />
   }
 
   return children

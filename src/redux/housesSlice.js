@@ -8,6 +8,13 @@ const housesSlice = createSlice({
     reducers: {
         addHouses: (state, action) => {
             state.data = action.payload
+        },
+        addHouse: (state, action) => {
+            state.data.push(action.payload)
+        },
+        deletHouse: (state, action) => {
+            const newArr = state.data.filter( (item) => item.id !== action.payload)
+            state.data = newArr
         }
     }
 })  

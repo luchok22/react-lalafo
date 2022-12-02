@@ -4,11 +4,15 @@ import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import API from '../../api/api';
+import { useDispatch } from 'react-redux';
+import { housesSliceActions } from '../../redux/housesSlice';
 const CreateAd = (props) => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
   const [price, setPrice] = useState('')
   const navigate = useNavigate();
+  const [isSending, setSending] = useState(false)
+  const dispatch = useDispatch()
   const [img, setImg] = useState('')
  const toastError = ()=> toast.error('🦄 Error', {
    position: "top-right",
@@ -23,7 +27,7 @@ const CreateAd = (props) => {
  const notify = () => toast('Успешно отправлен')
   const submit = (e) => {
      e.preventDefault()
-
+       setSending(true)
      const data = {
       title: title,
       price: price,
@@ -45,6 +49,7 @@ const CreateAd = (props) => {
      setPrice('')
      setTitle('')
      notify()
+     dispatch(housesSliceActions.addHouse(data))
     })
     .then(() => {
       setTimeout(newNav, 5000)
@@ -54,7 +59,7 @@ const CreateAd = (props) => {
     })
   }
   const newNav = () => {
-    navigate('/')
+    navigate('/profile')
   } 
 
   return (
@@ -91,7 +96,7 @@ const CreateAd = (props) => {
         </div>
         <div className={css.saveAd}>
           <span><Link to='/profile'>Close</Link></span>
-          <button><Link>Save</Link></button>
+          <button disabled={isSending}>Save</button>
           <ToastContainer/>
         </div>
       </form>
