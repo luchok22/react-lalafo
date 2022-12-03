@@ -3,9 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import API from '../../api/api';
 import { useDispatch } from 'react-redux';
-import { housesSliceActions } from '../../redux/housesSlice';
+import { addHouseCreate} from '../../redux/housesSlice';
 const CreateAd = (props) => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
@@ -42,14 +41,13 @@ const CreateAd = (props) => {
     //   }
 
     //  })
-     API.createAd(data)
+    dispatch(addHouseCreate(data))
     .then(() => {
      setDesc('') 
      setImg('')
      setPrice('')
      setTitle('')
      notify()
-     dispatch(housesSliceActions.addHouse(data))
     })
     .then(() => {
       setTimeout(newNav, 5000)

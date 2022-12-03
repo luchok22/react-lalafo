@@ -2,16 +2,13 @@ import css from "./Carts.module.css"
 import { Link } from "react-router-dom"
 import API from "../../api/api"
 import { useDispatch } from "react-redux"
-import { housesSliceActions } from "../../redux/housesSlice"
+import { deleteById, housesSliceActions } from "../../redux/housesSlice"
 const HomeCarts = ({id, imgUrl, title, price, isAdmin}) => {
   const dispatch = useDispatch()
   const onDelete = () => {
     const res = window.confirm("Удалить?")
     if(res) {
-      API.deleteID(id).then(() => {
-          alert("Вы успешно удалили " +  id);
-          dispatch(housesSliceActions.deletHouse(id))
-        });
+      dispatch(deleteById(id))
         // fetch(`${base_url}houses/${id}`, {
         //   method: "DELETE"
         // })

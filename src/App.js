@@ -7,9 +7,8 @@ import AboutHome from './pages/AboutHome/AboutHome';
 import CreateAd from './pages/CreateAd/CreateAd';
 import MyProfile from './pages/MyProfile/MyProfile';
 import { useEffect } from 'react';
-import API from './api/api';
 import { useDispatch } from 'react-redux';
-import { housesSliceActions } from './redux/housesSlice';
+import { initialize } from './redux/housesSlice';
 import PublicRoute from './route/PublicRoute';
 import PrivateRoute from './route/PrivateRoute';
 function App() {
@@ -17,9 +16,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    API.getAllAds().then((res) => {
-      dispatch(housesSliceActions.addHouses(res.data))
-    });
+      dispatch(initialize())
     // fetch(base_url + "houses")
     // .then((resp) => resp.json())
     // .then((data) => setHouse(data))
